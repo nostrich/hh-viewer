@@ -17,7 +17,7 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-3">
+        <div class="col-4">
           <h3>Hand History Viewer</h3>
           <hr />
           <div class="form-group">
@@ -29,7 +29,30 @@
           
           <hr />
           
-          
+          <h5>Settings</h5>
+          <form>
+              <fieldset id="hhSettings" disabled>
+                <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="convertStacks">
+                      <label class="form-check-label" for="convertStacks">
+                        Convert chip counts to big blinds
+                      </label>
+                    </div>
+                  </div>
+                  <div class="mb-3">
+                    <div class="form-check">
+                      <input class="form-check-input" type="checkbox" id="hidePlayers">
+                      <label class="form-check-label" for="hidePlayers">
+                        Anonymise player names
+                      </label>
+                    </div>
+                  </div>
+                  <button type="submit" class="btn-sm btn-secondary hhSave">Save as image</button>
+              </fieldset>
+          </form>
+
+          <hr />
 
           <h5>Help</h5>
           <ul>
@@ -37,33 +60,13 @@
             <li class="text-muted">Click "Copy" in the popup</li>
             <li class="text-muted">Paste it into the box above and click "View"</li>
             <li class="text-muted">Click "Clear" to empty the box and enter a new hand</li>
+            <li class="text-muted">Get help or suggest an improvement <a href="https://community.skypoker.com/discussion/178890/sky-hand-history-viewer-tool">in this forum thread</a></li>
           </ul>
         </div>
         <div class="col">
           <div class="handHistory" id="hand"></div>
         </div>
-        <div class="col-2">
-          <h5>Tools</h5>
-          <div id="handimage"></div>
-          <button type="submit" class="btn-sm btn-primary hhConvertBlinds">Convert to BB</button>
-          <hr />
-          <button type="submit" class="btn-sm btn-primary hhSave">Save as image</button>
-          
-          <!-- <textarea class="form-control" id="encodedHand"></textarea> -->
-          
-          <hr />
-          
-          <h5>Tips</h5>
-          <ul>
-            <li class="text-muted">Click a villain's name to anonymise them</li>
-            <li class="text-muted">Click "Convert to BB" to convert chip values to big blinds</li>
-            <li class="text-muted">Click "Save as image" to download an image of the hand</li>
-            <li class="text-muted">Get help or suggest an improvement <a href="https://community.skypoker.com/discussion/178890/sky-hand-history-viewer-tool">in this forum thread</a></li>
-          </ul>
-          
-          <hr />
-          
-        </div>
+        
       </div>
     </div>
 
