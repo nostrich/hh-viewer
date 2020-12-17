@@ -9,7 +9,98 @@
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
 
-    <link rel="stylesheet" type="text/css" href="style.css">
+    <style>
+        body {
+        margin-top: 10px;
+        }
+        #handimage img {
+        margin-bottom: 10px;
+        }
+        table {
+        border: 1px solid #5b91bf;
+        font-size: 0.8em;
+        width: 600px;
+        }
+        thead th {
+        background-color: #5b91bf;
+        font-weight: bold;
+        color: #fff;
+        padding: 5px 5px;
+        }
+        tbody tr {
+        background-color: #fff;
+        }
+        tbody tr.hhalt {
+        background-color: #f1f9fd;
+        }
+        tbody tr th.hhrnd {
+        background-color: #d7edf9;
+        text-align: center;
+        color: #5b91bf;
+        border-right: 1px solid #badffd;
+        border-left: 1px solid #badffd;
+        }
+        tbody td {
+        border: 1px solid #badffd;
+        vertical-align: middle;
+        padding: 7px 5px;
+        }
+        table ul.plyrcard {
+        margin: -5px 0;
+        float: left;
+        }
+        table ul.plyrcard li {
+        display inline;
+        float: left;
+        list-style-type: none;
+        font-weight: bold;
+        }
+        table ul.plyrcard li span {
+        display: block;
+        width: 25px;
+        text-align: center;
+        margin-left: 2px;
+        margin-top: 4px;
+        margin-bottom: 4px;
+        margin-right: 2px;
+        padding-top: 2px;
+        padding-bottom: 2px;
+        font-size: 0.9em;
+        border-radius: 3px;
+        }
+        table ul.plyrcard li span.heart {
+        color: #fff;
+        background-color: #f23150;
+        }
+        table ul.plyrcard li span.heart::after {
+        content: "h"
+        }
+        table ul.plyrcard li span.diamond {
+        background-color: #4f88cf;
+        color: #fff
+        }
+        table ul.plyrcard li span.diamond::after {
+        content: "d"
+        }
+        table ul.plyrcard li span.club {
+        background-color: #709d28;
+        color: #fff
+        }
+        table ul.plyrcard li span.club::after {
+        content: "c"
+        }
+        table ul.plyrcard li span.spade {
+        background-color: #000;
+        color: #fff;
+        }
+        table ul.plyrcard li span.spade::after {
+        content: "s"
+        }
+
+        ul {
+        padding-left: 15px;
+        }
+    </style>
 
     <title>Sky Poker Hand History Viewer</title>
 
@@ -48,8 +139,8 @@
                       </label>
                     </div>
                   </div>
-                  <button type="submit" class="btn-sm btn-secondary hhSave">Save as image</button>
               </fieldset>
+              <button type="button" class="btn-sm btn-secondary" id="hhSave" disabled="true">Save as image</button>
           </form>
 
           <hr />

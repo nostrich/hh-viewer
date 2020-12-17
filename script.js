@@ -21,8 +21,8 @@ function checkHistoryPresent() {
 function enableSettings() {
     $("fieldset#hhSettings").attr("disabled", false);
     $("input#convertStacks").attr("disabled", false);
-    $("button.hhSave").attr("disabled", false);
-    $("button.hhSave").removeClass("btn-secondary").addClass("btn-primary");
+    $("button#hhSave").attr("disabled", false);
+    $("button#hhSave").addClass("btn-primary").removeClass("btn-secondary");
 }
 
 //Disable settings
@@ -30,8 +30,8 @@ function disableSettings() {
     $("input#convertStacks").prop("checked", false);
     $("input#hidePlayers").prop("checked", false);
     $("fieldset#hhSettings").attr("disabled", true);
-    $("button.hhSave").attr("disabled", true);
-    $("button.hhSave").removeClass("btn-primary").addClass("btn-secondary");
+    $("button#hhSave").attr("disabled", true);
+    $("button#hhSave").removeClass("btn-primary").addClass("btn-secondary");
 }
 
 // Convert stacks to big blinds
@@ -74,7 +74,6 @@ function convertStacks() {
 // Anonymise player names
 function hideNames() {
     var players = [];
-    var villains = 1;
 
     $("table#hhtimeline tr").each(function(i) {
         var name = $(this).find("td:first-child").text();
@@ -98,8 +97,6 @@ function hideNames() {
                 }
             })
         });
-        // $("table#hhtimeline tr td:first-child:contains(" + v + ")").text("Villain " + villains)
-        villains++;
     })
 }
 
@@ -141,8 +138,8 @@ $("input#hidePlayers").change(function(event) {
 })
 
 // Save image of hand
-$("button.hhSave").on("click", function(event) {
-  var node = document.getElementById('hand');
+$("button#hhSave").on("click", function(event) {
+  var node = document.getElementById('hhtimeline');
       domtoimage.toPng(node)
         .then(function (dataUrl) {
             var link = document.createElement('a');
