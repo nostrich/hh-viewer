@@ -1,1 +1,82 @@
-<h1>Hello</h1>
+<!doctype html>
+<html lang="en">
+  <head>
+    
+    <!-- Required meta tags -->
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+
+    <link rel="stylesheet" type="text/css" href="style.css">
+
+    <title>Sky Poker Hand History Viewer</title>
+
+  </head>
+  <body>
+    <div class="container">
+      <div class="row">
+        <div class="col-3">
+          <h3>Hand History Viewer</h3>
+          <hr />
+          <div class="form-group">
+            <label for="exampleFormControlTextarea1" class="text-muted">Paste hand history here:</label>
+            <textarea class="form-control hh" id="exampleFormControlTextarea1" rows="5"></textarea>
+          </div>
+          <button type="submit" class="btn-sm btn-success hhGoBrrr">View</button>
+          <button type="submit" class="btn-sm btn-secondary hhGoBye">Clear</button>
+          
+          <hr />
+          
+          <h5>Help</h5>
+          <ul>
+            <li class="text-muted">Go to "My Sky Poker" then "Hand History" to find the hand you want to share</li>
+            <li class="text-muted">Click "Copy" in the popup</li>
+            <li class="text-muted">Paste it into the box above and click "View"</li>
+            <li class="text-muted">Click "Clear" to empty the box and enter a new hand</li>
+          </ul>
+        </div>
+        <div class="col">
+          <div class="handHistory" id="hand"></div>
+        </div>
+        <div class="col-2">
+          <h5>Tools</h5>
+          <div id="handimage"></div>
+          <button type="submit" class="btn-sm btn-primary hhConvertBlinds">Convert to BB</button>
+          <hr />
+          <button type="submit" class="btn-sm btn-primary hhSave">Save as image</button>
+          
+          <!-- <textarea class="form-control" id="encodedHand"></textarea> -->
+          
+          <hr />
+          
+          <button class="btn-sm btn-primary mb-2" id="hhShort">Get URL</button>
+          <input type="text" class="form-control form-control-sm mb-2 mr-sm-2" id="shortUrl">
+          
+          <hr />
+          
+          <h5>Tips</h5>
+          <ul>
+            <li class="text-muted">Click a villain's name to anonymise them</li>
+            <li class="text-muted">Click "Convert to BB" to convert chip values to big blinds</li>
+            <li class="text-muted">Click "Save as image" to download an image of the hand</li>
+            <li class="text-muted">Get help or suggest an improvement <a href="https://community.skypoker.com/discussion/178890/sky-hand-history-viewer-tool">in this forum thread</a></li>
+          </ul>
+          
+          <hr />
+          
+        </div>
+      </div>
+    </div>
+
+    <!-- Optional JavaScript -->
+    <!-- jQuery first, then Popper.js, then Bootstrap JS -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+    <script src="script.js" defer></script>
+    <script src="domtoimage.js" defer></script>
+    
+  </body>
+</html>
