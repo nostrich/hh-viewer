@@ -1,31 +1,17 @@
-// client-side js, loaded by index.html
-// run by the browser each time the page is loaded
-var base64 = null;
-
+// Click button, make table
 $("button.hhGoBrrr").on("click", function(event) {
   var contents = $("textarea.hh").val()
   $("div.handHistory").html(contents);
   
-  base64 = btoa(contents);
-  
 });
 
+// Clear textarea
 $("button.hhGoBye").on("click", function(event) {
   $("textarea.hh").val("")
   $("textarea.hh").focus()
 });
 
-// Get short URL
-$("button#hhShort").on("click", function(event) {
-  var url = base64;
-  fetch('/shorten/' + url)
-    .then(response => response.text())
-    .then(data => {
-      // console.log(data)
-      $("#shortUrl").val(data);
-    })
-});
-
+// Save image of hand
 $("button.hhSave").on("click", function(event) {
   var node = document.getElementById('hand');
       domtoimage.toPng(node)
@@ -40,8 +26,7 @@ $("button.hhSave").on("click", function(event) {
         });
 });
 
-// Convert to BB
-
+// Convert chip values to big blinds
 $("div.row").on("click", "button.hhConvertBlinds", function(event) {
   // find bb, convert numbers
   var bbstr = $("table#hhtimeline tr:eq(2) td:eq(3)").text()
@@ -78,6 +63,7 @@ $("div.row").on("click", "button.hhConvertBlinds", function(event) {
   });
 });
 
+// Lazy implementation of anonymising names
 var villains = 1;
 
 $("#hand").on('click', 'table#hhtimeline tr td:first-child', function(e) {
