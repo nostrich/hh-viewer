@@ -11,21 +11,24 @@
 
     <style>
         body {
-        margin-top: 10px;
+          margin-top: 0px;
+        }
+        div#hand {
+          margin-top: 15px;
         }
         #handimage img {
-        margin-bottom: 10px;
+          margin-bottom: 10px;
         }
         table {
-        border: 1px solid #5b91bf;
-        font-size: 0.8em;
-        width: 600px;
+          border: 1px solid #5b91bf;
+          font-size: 0.8em;
+          width: 600px;
         }
         thead th {
-        background-color: #5b91bf;
-        font-weight: bold;
-        color: #fff;
-        padding: 5px 5px;
+          background-color: #5b91bf;
+          font-weight: bold;
+          color: #fff;
+          padding: 5px 5px;
         }
         tbody tr {
         background-color: #fff;
@@ -100,6 +103,34 @@
         ul {
         padding-left: 15px;
         }
+
+        h5 {
+          font-size: 1.1rem;
+        }
+        fieldset#hhSettings {
+          margin-top: 0.8rem;
+        }
+        fieldset#hhSettings div.mb-3 {
+          margin-bottom: 0.3rem !important;
+        }
+        fieldset#hhSettings div.mb-3 input {
+          margin-top: .4rem;
+        }
+        fieldset#hhSettings div.mb-3 label {
+          font-size: 0.9rem;
+        }
+        form button {
+          margin-top: 0.5rem;
+        }
+        ul.help {
+          font-size: 0.9rem;
+        }
+        div.sidebar {
+          
+        }
+        div.sidebar h4 {
+          margin-top: 15px;
+        }
     </style>
 
     <title>Sky Poker Hand History Viewer</title>
@@ -108,19 +139,16 @@
   <body>
     <div class="container">
       <div class="row">
-        <div class="col-3">
-          <h3>Hand History Viewer</h3>
+        <div class="col-3 sidebar">
+          <h4>Hand History Viewer</h4>
           <hr />
           <div class="form-group">
-            <label for="exampleFormControlTextarea1" class="text-muted">Paste hand history here:</label>
-            <textarea class="form-control hh" id="exampleFormControlTextarea1" rows="5"></textarea>
+            <textarea class="form-control hh" rows="4" placeholder="Paste hand history here"></textarea>
           </div>
           <button type="submit" class="btn-sm btn-success hhGoBrrr">View</button>
           <button type="submit" class="btn-sm btn-secondary hhGoBye">Clear</button>
+          <button type="button" class="btn-sm btn-secondary" id="hhSave" disabled="true">Save as image</button>
           
-          <hr />
-          
-          <h5>Settings</h5>
           <form>
               <fieldset id="hhSettings" disabled>
                 <div class="mb-3">
@@ -140,13 +168,12 @@
                     </div>
                   </div>
               </fieldset>
-              <button type="button" class="btn-sm btn-secondary" id="hhSave" disabled="true">Save as image</button>
           </form>
 
           <hr />
 
           <h5>Help</h5>
-          <ul>
+          <ul class="help">
             <li class="text-muted">Go to "My Sky Poker" then "Hand History" to find the hand you want to share</li>
             <li class="text-muted">Click "Copy" in the popup</li>
             <li class="text-muted">Paste it into the box above and click "View"</li>
