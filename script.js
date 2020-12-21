@@ -1,7 +1,7 @@
 function sillyName() {
-    var adjectives = ["Adorable","Agitated","Aggressive","Ancient","Annoying","Arrogant","Beautiful","Colossal","Confused","Crooked","Drab","Dull","Exquisite","Fragile","Gifted","Gigantic","Grumpy","Helpful","Lazy","Miniature","Petite","Scrawny","Tired"];
-    var animals = ["Armadillo", "Shark", "Fish", "Narwhal", "Crab", "Axolotl", "Vulture", "Panda", "Blobfish", "Cheetah", "Octopus", "Squid"];
-
+    var adjectives = ["Adorable","Agitated","Aggressive","Ancient","Annoying","Arrogant","Beautiful", "Bearded", "Cocky", "Colossal","Confused","Creepy","Crooked","Drab", "Drunk", "Dull","Exquisite","Filthy","Flirty","Fluffy","Fragile","Gifted","Gigantic","Greedy","Grumpy", "Hairless", "Helpful","Lazy","Miniature","Naked","Petite","Scrawny", "Sexy", "Tired","Useless", "Violent"];
+    var animals = ["Armadillo", "Shark", "Fish", "Narwhal", "Crab", "Axolotl", "Vulture", "Panda", "Blobfish", "Cheetah", "Octopus", "Squid", "Kitten", "Peacock", "Swan", "Duck", "Giraffe"];
+    
     var a = adjectives[Math.floor(Math.random() * adjectives.length)]
     var b = animals[Math.floor(Math.random() * animals.length)]
 
